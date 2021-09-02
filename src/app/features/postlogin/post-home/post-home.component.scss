@@ -1,0 +1,42 @@
+.page-wrapper{
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
+
+    nav{
+        background: cadetblue;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        .title{
+            a{
+                font: normal normal 600 16px/12px Soleil;
+                letter-spacing: 1.5px;
+            }
+        }
+        .log-user{
+            width: 80px;
+            p{
+                font: normal normal 600 14px/12px Soleil;  
+            }
+        }
+    }
+
+    .main-wrapper{
+        width: 100%;
+        padding: 10px 20px;
+        .new-box{
+            width: 65%;
+            border: 1px solid black;
+            border-radius: 25px;
+            text-align: center;
+            padding: 2.5rem;
+            p{
+                font: normal normal 600 18px/12px Soleil;
+            }
+        }
+    }
+}
