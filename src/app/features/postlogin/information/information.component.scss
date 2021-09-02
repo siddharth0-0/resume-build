@@ -1,0 +1,57 @@
+.page-wrapper{
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
+
+    nav{
+        background: cadetblue;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        .title{
+            a{
+                font: normal normal 600 16px/12px Soleil;
+                letter-spacing: 1.5px;
+            }
+        }
+        .log-user{
+            width: 80px;
+            p{
+                font: normal normal 600 14px/12px Soleil;  
+            }
+        }
+    }
+
+    .main-wrapper{
+        width: 100%;
+        padding: 10px 20px;
+       .progress-bar{
+            width: 100%;
+            text-align: center;
+            font: normal normal 600 18px Soleil;
+        }
+
+        .form-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 2rem 6rem;
+        }
+        .button-box{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                width: 80px;
+                height: 38px;
+                border-radius: 4px;
+                border: none;
+                background: cornflowerblue;
+                margin: 0 15px;
+            }
+        }
+    }
+}
