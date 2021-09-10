@@ -6,6 +6,8 @@ import { PersonalComponent } from './personal/personal.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { EducationComponent } from './education/education.component';
 import { InformationComponent } from './information.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,14 @@ import { InformationComponent } from './information.component';
     InformationComponent,
     PersonalComponent,
     WorkExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,
-    InformationRoutingModule
+    InformationRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class InformationModule { }
