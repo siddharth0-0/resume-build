@@ -1,16 +1,16 @@
 <div class="page-wrapper">
     <div class="content-box">
         <form action="">
-            <div class="type-block">
+            <div class="type-block" [formGroup]="uniForm">
                 <label for="">University</label>
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">University/College Name</label>
-                        <input type="text" placeholder="James" required>
+                        <input type="text" [class.is-invalid]= "uniForm.get('uniName').invalid && uniForm.get('uniName').touched" placeholder="James" formControlName="uniName" required>
                     </div>
                     <div class="mid-in">
                         <label for="lname">Select a Degree</label>
-                        <select name="" id="">
+                        <select formControlName="uniDegree">
                             <option value="">High School</option>
                             <option value="">Diploma</option>
                             <option value="">Bachelors of Science</option>
@@ -22,16 +22,16 @@
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">Field Name</label>
-                        <input type="text" placeholder="ex Computer Science" required>
+                        <input type="text" [class.is-invalid]= "uniForm.get('uniFieldName').invalid && uniForm.get('uniFieldName').touched" placeholder="ex Computer Science" formControlName="uniFieldName" required>
                     </div>
                     <div class="sub-row">
                         <div class="small-in">
                             <label for="lname">From</label>
-                            <input type="date" required>
+                            <input type="date" formControlName="uniStartDate" required>
                         </div>
                         <div class="small-in">
                             <label for="lname">Graduation Date</label>
-                            <input type="date" required>
+                            <input type="date" formControlName="uniEndDate" required>
                         </div>
                     </div>
                 </div>
@@ -39,25 +39,25 @@
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">City</label>
-                        <input type="text" placeholder="NeYork" required>
+                        <input type="text" [class.is-invalid]= "uniForm.get('uniCity').invalid && uniForm.get('uniCity').touched" placeholder="NeYork" formControlName="uniCity" required>
                     </div>
                     <div class="mid-in">
                         <label for="name">Country</label>
-                        <input type="text" placeholder="USA" required>
+                        <input type="text" [class.is-invalid]= "uniForm.get('uniCountry').invalid && uniForm.get('uniCountry').touched" placeholder="USA" formControlName="uniCountry" required>
                     </div>
                 </div>
             </div>
 
-            <div class="type-block">
+            <div class="type-block" [formGroup]="schoolForm">
                 <label for="">School</label>
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">University/College Name</label>
-                        <input type="text" placeholder="James" required>
+                        <input type="text" [class.is-invalid]= "schoolForm.get('schoolName').invalid && schoolForm.get('schoolName').touched" placeholder="James" formControlName="schoolName" required>
                     </div>
                     <div class="mid-in">
                         <label for="lname">Select a Degree</label>
-                        <select name="" id="">
+                        <select name="" id="" formControlName="schoolDegree">
                             <option value="">Science</option>
                             <option value="">Commerce</option>
                             <option value="">Commerce + Maths</option>
@@ -68,16 +68,16 @@
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">Field Name</label>
-                        <input type="text" placeholder="ex PCM" required>
+                        <input type="text" [class.is-invalid]= "schoolForm.get('schoolFieldName').invalid && schoolForm.get('schoolFieldName').touched" placeholder="ex PCM" formControlName="schoolFieldName" required>
                     </div>
                     <div class="sub-row">
                         <div class="small-in">
                             <label for="lname">From</label>
-                            <input type="date" required>
+                            <input type="date" formControlName="schoolStartDate" required>
                         </div>
                         <div class="small-in">
                             <label for="lname">Graduation Date</label>
-                            <input type="date" required>
+                            <input type="date" formControlName="schoolEndDate" required>
                         </div>
                     </div>
                 </div>
@@ -85,11 +85,11 @@
                 <div class="in-row">
                     <div class="mid-in">
                         <label for="name">City</label>
-                        <input type="text" placeholder="NeYork" required>
+                        <input type="text" [class.is-invalid]= "schoolForm.get('schoolCity').invalid && schoolForm.get('schoolCity').touched" placeholder="NeYork" formControlName="schoolCity" required>
                     </div>
                     <div class="mid-in">
                         <label for="name">Country</label>
-                        <input type="text" placeholder="USA" required>
+                        <input type="text" [class.is-invalid]= "schoolForm.get('schoolCountry').invalid && schoolForm.get('schoolCountry').touched" placeholder="USA" formControlName="schoolCountry" required>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +9,22 @@ import { Router } from '@angular/router';
 })
 export class PersonalComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  public personalForm : FormGroup;
+
+  constructor(private router : Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.personalForm = this.formBuilder.group({
+      fname : ['null',Validators.required],
+      lname :['null',Validators.required],
+      address : [null,Validators.required],
+      city :[null,Validators.required],
+      zip : [null,[Validators.required,Validators.minLength(6)]],
+      country :[null,Validators.required],
+      email : [null,[Validators.required,Validators.email]],
+      number : [null,[Validators.required,Validators.minLength(10)]],
+      // git :[null,Validators.required]
+    })
   }
 
   onCancel(){

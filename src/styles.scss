@@ -29,3 +29,7 @@ html{
     font-weight: 400;
     src: local('Soleil'), url('https://fonts.cdnfonts.com/s/48710/SoleilBook.woff') format('woff');
 }
+
+.is-invalid{
+    border: 1px solid #D35551;
+}
