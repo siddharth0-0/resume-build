@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-education',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
+  onBack(){
+    this.router.navigate(['post/information/personal']);
+  }
+  onNext(){
+    this.router.navigate(['post/information/work']);
+  }
 }
