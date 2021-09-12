@@ -1,32 +1,32 @@
 <div class="content-wrapper">
-  <form action="">
+  <form [formGroup] = "workForm">
     <div class="in-row">
       <div class="mid-in">
         <label for="name">Company Name</label>
-        <input type="text" placeholder="Wipro" required>
+        <input type="text" formControlName="companyName" placeholder="Wipro" required>
       </div>
       <div class="mid-in">
         <label for="lname">Job Title</label>
-        <input type="text" placeholder="Software Developer Intern" required>
+        <input type="text" formControlName="jobTitle" placeholder="Software Developer Intern" required>
       </div>
     </div>
 
     <div class="in-row">
       <div class="mid-in">
         <label for="name">City</label>
-        <input type="text" placeholder="Wipro" required>
+        <input type="text" formControlName="city" placeholder="Wipro" required>
       </div>
       <div class="mid-in">
         <label for="lname">State</label>
-        <input type="text" placeholder="Bengaluru" required>
+        <input type="text" formControlName="state" placeholder="Bengaluru" required>
       </div>
     </div>
 
     <div class="in-row">
       <div class="sub-row">
         <div class="small-in">
-          <label for="lname">Start Date</label>
-          <select name="" id="">
+          <label for="lname">Start Month</label>
+          <select name="" id="" [formControlName]="workForm.get('startMonth')">
             <option value="">January</option>
             <option value="">Februray</option>
             <option value="">March</option>
@@ -36,8 +36,8 @@
           </select>
         </div>
         <div class="small-in">
-          <label for="lname">Country</label>
-          <select name="" id="">
+          <label for="lname">Start Year</label>
+          <select name="" id=""  formControlName="startYear">
             <option value="">2005</option>
             <option value="">2006</option>
             <option value="">2007</option>
@@ -57,8 +57,8 @@
 
       <div class="sub-row">
         <div class="small-in">
-          <label for="lname">Start Date</label>
-          <select name="" id="">
+          <label for="lname">End Month</label>
+          <select name="" id="" [formControlName]="workForm.get('endMonth')">
             <option value="">January</option>
             <option value="">Februray</option>
             <option value="">March</option>
@@ -68,8 +68,8 @@
           </select>
         </div>
         <div class="small-in">
-          <label for="lname">Country</label>
-          <select name="" id="">
+          <label for="lname">End Year</label>
+          <select name="" id="" [formControlName]="workForm.get('endYear')">
             <option value="">2005</option>
             <option value="">2006</option>
             <option value="">2007</option>
@@ -88,7 +88,7 @@
       </div>
     </div>
     <div class="long-in">
-      <textarea name="" id="" placeholder="Description of work u done." required></textarea>
+      <textarea formControlName="description" placeholder="Description of work u done." required></textarea>
     </div>
     <div class="button-box">
       <button (click)="onBack()">Back</button>

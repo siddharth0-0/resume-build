@@ -1,13 +1,13 @@
 <div class="content-wrapper">
-    <form action="">
+    <form [formGroup] = "skillForm">
         <div class="in-row">
             <div class="mid-in">
                 <label for="name">Skill</label>
-                <input type="text" placeholder="James" required>
+                <input type="text" formControlName = "skillName" placeholder="James" required>
             </div>
             <div class="mid-in">
                 <label for="lname">Skill Level</label>
-                <select>
+                <select formControlName = "skillLevel">
                     <option value="">Basic</option>
                     <option value="">Intermediate</option>
                     <option value="">Advance</option>
@@ -17,11 +17,11 @@
         <div class="in-row">
             <div class="mid-in">
                 <label for="name">Skill</label>
-                <input type="text" placeholder="James" required>
+                <input type="text" formControlName = "skillName" placeholder="James" required>
             </div>
             <div class="mid-in">
                 <label for="lname">Skill Level</label>
-                <select>
+                <select formControlName = "skillLevel">
                     <option value="">Basic</option>
                     <option value="">Intermediate</option>
                     <option value="">Advance</option>
@@ -31,11 +31,11 @@
         <div class="in-row">
             <div class="mid-in">
                 <label for="name">Skill</label>
-                <input type="text" placeholder="James" required>
+                <input type="text" formControlName = "skillName" placeholder="James" required>
             </div>
             <div class="mid-in">
                 <label for="lname">Skill Level</label>
-                <select>
+                <select formControlName = "skillLevel">
                     <option value="">Basic</option>
                     <option value="">Intermediate</option>
                     <option value="">Advance</option>

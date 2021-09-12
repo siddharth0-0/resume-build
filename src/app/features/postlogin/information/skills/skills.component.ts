@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  skillForm : FormGroup;
+
+  constructor(private router : Router, private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
+    this.skillForm = this.formBuilder.group({
+      skillName : [null,Validators.required],
+      skillLevel : [null,Validators.required]
+    })
   }
 
   onBack(){
