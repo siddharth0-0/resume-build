@@ -1,6 +1,17 @@
 .content-wrapper{
   width: 100%;
   padding: 1rem;
+  .head-wrap{
+    h1{
+      font: normal normal 600 22px/12px Soleil;
+      letter-spacing: 1.5px;
+      margin: 15px 0;
+    }
+    h5{
+      font: normal normal normal 14px/12px Soleil;
+      letter-spacing: 1px;
+    }
+  }
   form{
     width: 100%;
     .in-row{
@@ -14,11 +25,13 @@
         label{
           font: normal normal 600 14px/12px Soleil;
           letter-spacing: 0.80px;
-          margin: 5px 0;
+          margin: 10px 0;
         }
         input{
-          height: 38px;
+          height: 35px;
           border-radius: 5px;
+          padding: 0 5px;
+          border: 1px solid #CCCCCC;
         }
       }
       .sub-row{
@@ -34,16 +47,19 @@
           label{
             font: normal normal 600 14px/12px Soleil;
             letter-spacing: 0.80px;
-            margin: 5px 0;
+            margin: 10px 0;
           }
           input{
-            height: 38px;
+            height: 35px;
             border-radius: 5px;
+            padding: 0 5px;
+            border: 1px solid #CCCCCC;
           }
           select{
-            height: 38px;
+            height: 35px;
             border-radius: 5px;
-            padding: 5px;
+            padding: 0 5px;
+            border: 1px solid #CCCCCC;
           }
         }
       }
@@ -57,7 +73,7 @@
       label{
         font: normal normal 600 14px/12px Soleil;
         letter-spacing: 0.80px;
-        margin: 5px 0;
+        margin: 10px 0;
       }
       textarea{
         height: 60px;
