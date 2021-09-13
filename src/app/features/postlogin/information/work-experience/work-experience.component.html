@@ -3,96 +3,98 @@
     <h1>Work Experience Information</h1>
     <h5>A form for all the past work experiences.</h5>
   </div>
-  <form [formGroup] = "workForm" *ngFor="let item of addWork.controls">
-    <div class="in-row">
-      <div class="mid-in">
-        <label for="name">Company Name</label>
-        <input type="text" formControlName="companyName" placeholder="Wipro" required>
-      </div>
-      <div class="mid-in">
-        <label for="lname">Job Title</label>
-        <input type="text" formControlName="jobTitle" placeholder="Software Developer Intern" required>
-      </div>
-    </div>
-
-    <div class="in-row">
-      <div class="mid-in">
-        <label for="name">City</label>
-        <input type="text" formControlName="city" placeholder="Wipro" required>
-      </div>
-      <div class="mid-in">
-        <label for="lname">State</label>
-        <input type="text" formControlName="state" placeholder="Bengaluru" required>
-      </div>
-    </div>
-
-    <div class="in-row">
-      <div class="sub-row">
-        <div class="small-in">
-          <label for="lname">Start Month</label>
-          <select name="" id="" [formControlName]="item.get('startMonth')">
-            <option value="">January</option>
-            <option value="">Februray</option>
-            <option value="">March</option>
-            <option value="">May</option>
-            <option value="">June</option>
-            <option value="">July</option>
-          </select>
+  <form [formGroup] = "workForm">
+    <div class="content-box"  *ngFor="let item of addWork.controls">
+      <div class="in-row">
+        <div class="mid-in">
+          <label for="name">Company Name</label>
+          <input type="text" [formControl]="item.get('companyName')" placeholder="Wipro" required>
         </div>
-        <div class="small-in">
-          <label for="lname">Start Year</label>
-          <select name="" id=""  formControlName="startYear">
-            <option value="">2005</option>
-            <option value="">2006</option>
-            <option value="">2007</option>
-            <option value="">2008</option>
-            <option value="">2009</option>
-            <option value="">2010</option>
-            <option value="">2011</option>
-            <option value="">2012</option>
-            <option value="">2013</option>
-            <option value="">2014</option>
-            <option value="">2015</option>
-            <option value="">2016</option>
-            <option value="">2017</option>
-          </select>
+        <div class="mid-in">
+          <label for="lname">Job Title</label>
+          <input type="text" [formControl]="item.get('jobTitle')" placeholder="Software Developer Intern" required>
         </div>
       </div>
-
-      <div class="sub-row">
-        <div class="small-in">
-          <label for="lname">End Month</label>
-          <select name="" id="" [formControlName]="item.get('endMonth')">
-            <option value="">January</option>
-            <option value="">Februray</option>
-            <option value="">March</option>
-            <option value="">May</option>
-            <option value="">June</option>
-            <option value="">July</option>
-          </select>
+  
+      <div class="in-row">
+        <div class="mid-in">
+          <label for="name">City</label>
+          <input type="text" [formControl]="item.get('city')" placeholder="Wipro" required>
         </div>
-        <div class="small-in">
-          <label for="lname">End Year</label>
-          <select name="" id="" [formControlName]="item.get('endYear')">
-            <option value="">2005</option>
-            <option value="">2006</option>
-            <option value="">2007</option>
-            <option value="">2008</option>
-            <option value="">2009</option>
-            <option value="">2010</option>
-            <option value="">2011</option>
-            <option value="">2012</option>
-            <option value="">2013</option>
-            <option value="">2014</option>
-            <option value="">2015</option>
-            <option value="">2016</option>
-            <option value="">2017</option>
-          </select>
+        <div class="mid-in">
+          <label for="lname">State</label>
+          <input type="text" [formControl]="item.get('state')" placeholder="Bengaluru" required>
         </div>
       </div>
-    </div>
-    <div class="long-in">
-      <textarea formControlName="description" placeholder="Description of work u done." required></textarea>
+  
+      <div class="in-row">
+        <div class="sub-row">
+          <div class="small-in">
+            <label for="lname">Start Month</label>
+            <select name="" id="" [formControl]="item.get('startMonth')">
+              <option value="">January</option>
+              <option value="">Februray</option>
+              <option value="">March</option>
+              <option value="">May</option>
+              <option value="">June</option>
+              <option value="">July</option>
+            </select>
+          </div>
+          <div class="small-in">
+            <label for="lname">Start Year</label>
+            <select name="" id=""  [formControl]="item.get('startYear')">
+              <option value="">2005</option>
+              <option value="">2006</option>
+              <option value="">2007</option>
+              <option value="">2008</option>
+              <option value="">2009</option>
+              <option value="">2010</option>
+              <option value="">2011</option>
+              <option value="">2012</option>
+              <option value="">2013</option>
+              <option value="">2014</option>
+              <option value="">2015</option>
+              <option value="">2016</option>
+              <option value="">2017</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="sub-row">
+          <div class="small-in">
+            <label for="lname">End Month</label>
+            <select name="" id="" [formControl]="item.get('endMonth')">
+              <option value="">January</option>
+              <option value="">Februray</option>
+              <option value="">March</option>
+              <option value="">May</option>
+              <option value="">June</option>
+              <option value="">July</option>
+            </select>
+          </div>
+          <div class="small-in">
+            <label for="lname">End Year</label>
+            <select name="" id="" [formControl]="item.get('endYear')">
+              <option value="">2005</option>
+              <option value="">2006</option>
+              <option value="">2007</option>
+              <option value="">2008</option>
+              <option value="">2009</option>
+              <option value="">2010</option>
+              <option value="">2011</option>
+              <option value="">2012</option>
+              <option value="">2013</option>
+              <option value="">2014</option>
+              <option value="">2015</option>
+              <option value="">2016</option>
+              <option value="">2017</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="long-in">
+        <textarea [formControl]="item.get('description')" placeholder="Description of work u done." required></textarea>
+      </div>
     </div>
     <div class="button-box">
       <button (click)="onBack()">Back</button>

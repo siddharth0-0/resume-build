@@ -3,8 +3,24 @@
         <h1>Skills Information</h1>
         <h5>A form for all the technical skills you have.</h5>
     </div>
-    <form [formGroup] = "skillForm">
-        <div class="in-row">
+    <form [formGroup] = "skillForm" >
+        <div class="content-box" *ngFor="let item of addSkill.controls">
+            <div class="in-row">
+                <div class="mid-in">
+                    <label for="name">Skill</label>
+                    <input type="text" [formControl]="item.get('skillName')" placeholder="James" required>
+                </div>
+                <div class="mid-in">
+                    <label for="lname">Skill Level</label>
+                    <select [formControl]="item.get('skillLevel')">
+                        <option value="">Basic</option>
+                        <option value="">Intermediate</option>
+                        <option value="">Advance</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="in-row">
             <div class="mid-in">
                 <label for="name">Skill</label>
                 <input type="text" formControlName = "skillName" placeholder="James" required>
@@ -31,24 +47,17 @@
                     <option value="">Advance</option>
                 </select>
             </div>
-        </div>
-        <div class="in-row">
-            <div class="mid-in">
-                <label for="name">Skill</label>
-                <input type="text" formControlName = "skillName" placeholder="James" required>
-            </div>
-            <div class="mid-in">
-                <label for="lname">Skill Level</label>
-                <select formControlName = "skillLevel">
-                    <option value="">Basic</option>
-                    <option value="">Intermediate</option>
-                    <option value="">Advance</option>
-                </select>
-            </div>
-        </div>
+        </div> -->
         <div class="button-box">
             <button (click)="onBack()">Back</button>
             <button (click)="onNext()">Next</button>
+            <button class="add" (click)=" onAddForm()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+                Add Another
+              </button>
         </div>
     </form>
 </div>

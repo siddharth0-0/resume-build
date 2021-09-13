@@ -20,14 +20,14 @@ export class WorkExperienceComponent implements OnInit {
 
   ngOnInit(): void {
     this.addWork.push(this.formBuilder.group({
-      companyName : ['null',Validators.required],
+      companyName : [null,Validators.required],
       jobTitle :[null,Validators.required],
       city : [null,Validators.required],
       state :[null,Validators.required],
-      startMonth :['Februray',Validators.required],
-      startYear :['2012',Validators.required],
-      endMonth :['January',Validators.required],
-      endYear :['2012',Validators.required],
+      startMonth :[null,Validators.required],
+      startYear :[null,Validators.required],
+      endMonth :[null,Validators.required],
+      endYear :[null,Validators.required],
       description : [null],
     }));
     // this.workForm = this.formBuilder.group({
@@ -41,7 +41,7 @@ export class WorkExperienceComponent implements OnInit {
     //   endYear :['2012',Validators.required],
     //   description : [null],
     // })
-    this.workForm.get('addWork') as FormArray;
+    this.workForm.addControl('addWork',this.addWork);
   }
 
   // get addForm(){
@@ -50,14 +50,14 @@ export class WorkExperienceComponent implements OnInit {
 
   onAddForm(){
     let workField = this.formBuilder.group({
-      companyName : ['null',Validators.required],
+      companyName : [null,Validators.required],
       jobTitle :[null,Validators.required],
       city : [null,Validators.required],
       state :[null,Validators.required],
-      startMonth :['Februray',Validators.required],
-      startYear :['2012',Validators.required],
-      endMonth :['January',Validators.required],
-      endYear :['2012',Validators.required],
+      startMonth :[null,Validators.required],
+      startYear :[null,Validators.required],
+      endMonth :[null,Validators.required],
+      endYear :[null,Validators.required],
       description : [null],
     })
     this.addWork.push(workField);

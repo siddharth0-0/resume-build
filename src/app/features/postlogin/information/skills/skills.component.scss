@@ -14,46 +14,20 @@
     }
     form{
         width: 100%;
-        .in-row{
-            display: flex;
-            justify-content: space-between;
-            .mid-in{
-                display: flex;
-                flex-direction: column;
-                width: 45%;
-                margin: 15px 0;
-                label{
-                    font: normal normal 600 14px/12px Soleil;
-                    letter-spacing: 0.80px;
-                    margin: 5px 0;
-                }
-                input{
-                    height: 35px;
-                    border-radius: 5px;
-                    padding: 0 5px;
-                    border: 1px solid #CCCCCC;
-                }
-                select{
-                    height: 35px;
-                    border-radius: 5px;
-                    padding: 0 5px;
-                    border: 1px solid #CCCCCC;
-                }
-            }
-            .sub-row{
-                width: 45%;
+        .content-box{
+            width: 100%;
+            .in-row{
                 display: flex;
                 justify-content: space-between;
-                margin: 15px 0;
-                .small-in{
+                .mid-in{
                     display: flex;
                     flex-direction: column;
                     width: 45%;
-                    
+                    margin: 15px 0;
                     label{
                         font: normal normal 600 14px/12px Soleil;
                         letter-spacing: 0.80px;
-                        margin: 10px 0;
+                        margin: 5px 0;
                     }
                     input{
                         height: 35px;
@@ -61,9 +35,39 @@
                         padding: 0 5px;
                         border: 1px solid #CCCCCC;
                     }
+                    select{
+                        height: 35px;
+                        border-radius: 5px;
+                        padding: 0 5px;
+                        border: 1px solid #CCCCCC;
+                    }
+                }
+                .sub-row{
+                    width: 45%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    .small-in{
+                        display: flex;
+                        flex-direction: column;
+                        width: 45%;
+                        
+                        label{
+                            font: normal normal 600 14px/12px Soleil;
+                            letter-spacing: 0.80px;
+                            margin: 10px 0;
+                        }
+                        input{
+                            height: 35px;
+                            border-radius: 5px;
+                            padding: 0 5px;
+                            border: 1px solid #CCCCCC;
+                        }
+                    }
                 }
             }
         }
+
         .button-box{
             display: flex;
             justify-content: flex-end;
@@ -75,6 +79,10 @@
                 background: cornflowerblue;
                 margin: 0 15px;
                 cursor: pointer;
+            }
+            .add{
+                width: 150px;
+                color: #FFFF;
             }
         }
     }
