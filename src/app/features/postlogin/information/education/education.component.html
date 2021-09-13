@@ -30,11 +30,13 @@
                 <div class="sub-row">
                     <div class="small-in">
                         <label for="lname">From</label>
-                        <input type="date" formControlName="uniStartDate" required>
+                        <!-- <input type="month" formControlName="uniStartDate" required> -->
+                        <input type="number" min="1960" max="2022" step="1" value="2016" formControlName="uniStartDate" placeholder="2016" required/>
                     </div>
                     <div class="small-in">
-                        <label for="lname">Graduation Date</label>
-                        <input type="date" formControlName="uniEndDate" required>
+                        <label for="lname">Graduation Year</label>
+                        <!-- <input type="month" formControlName="uniEndDate" required> -->
+                        <input type="number" min="1960" max="2022" step="1" value="2016" placeholder="2022" formControlName="uniEndDate"/>
                     </div>
                 </div>
             </div>
@@ -76,11 +78,13 @@
                 <div class="sub-row">
                     <div class="small-in">
                         <label for="lname">From</label>
-                        <input type="date" formControlName="schoolStartDate" required>
+                        <!-- <input type="date" formControlName="schoolStartDate" required> -->
+                        <input type="number" min="1960" max="2022" step="1" value="2016" [class.is-invalid]= "schoolForm.get('schoolStartDate').invalid && schoolForm.get('schoolStartDate').touched" placeholder="2016" formControlName="schoolStartDate" required>
                     </div>
                     <div class="small-in">
-                        <label for="lname">Graduation Date</label>
-                        <input type="date" formControlName="schoolEndDate" required>
+                        <label for="lname">Graduation Year</label>
+                        <!-- <input type="date" formControlName="schoolEndDate" required> -->
+                        <input type="number" min="1960" max="2022" step="1" value="2016" [class.is-invalid]= "schoolForm.get('schoolEndDate').invalid && schoolForm.get('schoolEndDate').touched" placeholder="2022" formControlName="schoolEndDate" required>
                     </div>
                 </div>
             </div>

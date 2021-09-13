@@ -8,11 +8,11 @@
             <div class="in-row">
                 <div class="mid-in">
                     <label for="name">Skill</label>
-                    <input type="text" [formControl]="item.get('skillName')" placeholder="James" required>
+                    <input type="text" [formControl]="item.get('skillName')" [class.is-invalid]= "item.get('skillName').invalid && item.get('skillName').touched" placeholder="James" required>
                 </div>
                 <div class="mid-in">
                     <label for="lname">Skill Level</label>
-                    <select [formControl]="item.get('skillLevel')">
+                    <select [formControl]="item.get('skillLevel')" [class.is-invalid]= "item.get('skillLevel').invalid && item.get('skillLevel').touched">
                         <option value="">Basic</option>
                         <option value="">Intermediate</option>
                         <option value="">Advance</option>
@@ -20,34 +20,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="in-row">
-            <div class="mid-in">
-                <label for="name">Skill</label>
-                <input type="text" formControlName = "skillName" placeholder="James" required>
-            </div>
-            <div class="mid-in">
-                <label for="lname">Skill Level</label>
-                <select formControlName = "skillLevel">
-                    <option value="">Basic</option>
-                    <option value="">Intermediate</option>
-                    <option value="">Advance</option>
-                </select>
-            </div>
-        </div>
-        <div class="in-row">
-            <div class="mid-in">
-                <label for="name">Skill</label>
-                <input type="text" formControlName = "skillName" placeholder="James" required>
-            </div>
-            <div class="mid-in">
-                <label for="lname">Skill Level</label>
-                <select formControlName = "skillLevel">
-                    <option value="">Basic</option>
-                    <option value="">Intermediate</option>
-                    <option value="">Advance</option>
-                </select>
-            </div>
-        </div> -->
         <div class="button-box">
             <button (click)="onBack()">Back</button>
             <button (click)="onNext()">Next</button>

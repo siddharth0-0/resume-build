@@ -1,0 +1,88 @@
+.resume-wrapper{
+    display: flex;
+    justify-content: center;
+    .main-box{
+        border: 1px solid;
+        width: 90vw;
+        height: 100vh;
+        background: pink;
+        box-sizing: border-box;
+        .intro-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+            h1{
+                font: normal normal 600 24px/12px Soleil;
+                letter-spacing: 1.5px;
+            }
+            h5{
+                font: normal normal normal 16px/12px Soleil;
+                letter-spacing: 1px;
+            }
+        }
+        .body-wrap{
+            width: 100%;
+            display: flex;
+            height: 90%;
+            box-sizing: border-box;
+            .left-wrap{
+                width: 42%;
+                border: 1px solid;
+                height: 100%;
+                padding: 2rem 0.5rem;
+                .info-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 30%;
+                    .title-wrapper{
+                        font: normal normal normal 22px/12px Soleil;
+                    }
+                    .list-box{
+                        ul{
+                            list-style: none;
+                            li{
+                                font: normal normal normal 12px Soleil;
+                                margin: 10px;
+                            }
+                        }
+                    }
+                }
+                .education-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 60%;
+                    .title-wrapper{
+                        font: normal normal normal 22px/12px Soleil;
+                    }
+                    .sub-head{
+                        font: normal normal normal 16px/12px Soleil;
+                        .list-box{
+                            margin: 15px 0;
+                            h1{
+                                font: normal normal normal 14px Soleil;
+                                letter-spacing: 1px;
+                                margin: 10px 0;
+                            }
+                            ul{
+                                list-style: none;
+                                li{
+                                    font: normal normal normal 12px Soleil;
+                                    margin: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right-wrap{
+                width: 58%;
+                border: 1px solid;
+            }
+        }
+    }
+}
